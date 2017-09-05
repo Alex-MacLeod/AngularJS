@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angularExercise">
+<head >
+    <meta charset="UTF-8">
+    <title>Find movies</title>
+</head>
+    <body ng-controller="MovieController as mCtrl">
+        
+        <h2>Winners of the Academy Award for Best Picture</h2>
+
+        <table>
+            <tr>
+                <th>Film Title</th>
+                <th>Release country</th>
+                <th>Release Date</th>
+            </tr>
+            <tr ng-repeat="movie in mCtrl.films">
+                <td>{{movie.title | uppercase}}</td>
+                <td>{{movie.releaseCountry}}</td>
+                <td>{{movie.releaseDay + '/' + movie.releaseMonth + '/' + movie.releaseYear}}</td>
+            </tr>
+        </table>
+
+        <button ng-click="mCtrl.deleteLast()">Remove last film</button>
+
+        <script src="angular.js"></script>
+        <script src="movieapp.js"></script>
+        <script src="moviecontroller.js"></script>
+    </body>
+</html>
