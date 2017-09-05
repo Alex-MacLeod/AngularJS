@@ -6,20 +6,27 @@
 </head>
     <body ng-controller="MovieController as mCtrl">
         
-        <h2>Winners of the Academy Award for Best Picture</h2>
-
-        <table>
-            <tr>
-                <th>Film Title</th>
-                <th>Release country</th>
-                <th>Release Date</th>
-            </tr>
-            <tr ng-repeat="movie in mCtrl.films">
-                <td>{{movie.title | uppercase}}</td>
-                <td>{{movie.releaseCountry}}</td>
-                <td>{{movie.releaseDay + '/' + movie.releaseMonth + '/' + movie.releaseYear}}</td>
-            </tr>
-        </table>
+		<div class="container">
+			<div class="panel-heading">
+				<h2 class="panel-title">Winners of the Academy Award for Best Picture</h2>
+			</div>
+			<table class="table">
+				<thead>
+					<tr class="headers">
+						<th>Film Title</th>
+						<th>Release country</th>
+						<th>Release Date</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="movie in mCtrl.films">
+						<td>{{movie.title | uppercase}}</td>
+						<td>{{movie.releaseCountry}}</td>
+						<td>{{movie.releaseDay + '/' + movie.releaseMonth + '/' + movie.releaseYear}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 
         <button ng-click="mCtrl.deleteLast()">Remove last film</button>
 

@@ -137,24 +137,14 @@
             'releaseYear': 1944,
             'releaseMonth': 7,
             'releaseDay': 16
-            },
-            
-            {
-            
+            },{
             'title': 'The Lost Weekend',
-            
             'imdbId': 'tt0037884',
-            
             'releaseDate': '1945-11-29T05:00:00.000Z',
-            
             'releaseCountry': 'USA',
-            
             'releaseYear': 1945,
-            
             'releaseMonth': 10,
-            
             'releaseDay': 29
-            
             },
             
             {
