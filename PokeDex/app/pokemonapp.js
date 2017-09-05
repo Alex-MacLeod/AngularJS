@@ -1,0 +1,1 @@
+var pokemonapp = angular.module("PokemonTask",[]);
