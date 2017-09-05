@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angularExercise">
+    <head>
+        <meta charset="UTF-8">
+        <title>Find movies</title>
+    </head>
+    <body>
+        <nav>
+            <div>
+                <a href="#">Home</a>
+            </div>
+            <ul>
+                <li><a ui-sref="movies">Movies</a></li>
+                <li><a ui-sref="other">Other</a></li>
+            </ul>
+        </nav>
+        
+        <div ui-view></div>
+
+        <script src="scripts/angular.min.js"></script>
+        <script src="scripts/ui-router.min.js"></script>
+
+        <script src="app/movieapp.js"></script>
+        <script src="app/app-state-manager.js"></script>
+
+        <script src="app/features/movies/moviecontroller.js"></script>
+        <script src="app/features/other/othercontroller.js"></script>
+    </body>
+</html>

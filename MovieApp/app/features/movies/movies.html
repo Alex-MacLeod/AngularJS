@@ -1,0 +1,22 @@
+<div class="container" ng-controller="MovieController as mCtrl">
+	<div class="panel-heading">
+		<h2 class="panel-title">Winners of the Academy Award for Best Picture</h2>
+	</div>
+	<table class="table">
+		<thead>
+			<tr class="headers">
+				<th>Film Title</th>
+				<th>Release Country</th>
+				<th>Release Date</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="movie in mCtrl.films">
+				<td>{{movie.title | uppercase}}</td>
+				<td>{{movie.releaseCountry}}</td>
+				<td>{{movie.releaseDay + '/' + movie.releaseMonth + '/' + movie.releaseYear}}</td>
+			</tr>
+		</tbody>
+	</table>
+	<button ng-click="mCtrl.deleteLast()">Remove last film</button>
+</div>
