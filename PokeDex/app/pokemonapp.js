@@ -1,1 +1,1 @@
-var pokemonapp = angular.module("PokemonTask",[]);
+var pokemonApp = angular.module("PokemonApp",['ui.router']);

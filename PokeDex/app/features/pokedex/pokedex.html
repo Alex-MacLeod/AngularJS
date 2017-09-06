@@ -1,0 +1,43 @@
+<div ng-controller="pokedexController as pCtrl">
+    <div>
+        <h2 class="panel-title">PokeDex</h2>
+    </div>
+    <div>
+        Enter Pokemon ID or Name: <input type="text" ng-model="idRef">
+        <button ng-click="pCtrl.search(idRef + '/')">Find details</button>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th ng-click="ctrl.doSort()">Name</th>
+                    <th>Base Experience</th>
+                    <th>Height</th>
+                    <th>Weight</th>
+                    <th>Abilities</th>
+                    <th>Where to find</th>
+                    <th>Moves</th>
+                    <th>Species</th>
+                    <th>Statistics</th>
+                    <th>Types</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="poke in pCtrl.pokemon">
+                    <td>{{poke.id}}</td>
+                    <td>{{poke.name | uppercase}}</td>
+                    <td>{{poke.base_experience}}</td>
+                    <td>{{poke.height}}</td>
+                    <td>{{poke.weight}}</td>
+                    <td>{{poke.abilities}}</td>
+                    <td>{{poke.location_area_encounters}}</td>
+                    <td>{{poke.moves}}</td>
+                    <td>{{poke.species}}</td>
+                    <td>{{poke.stats}}</td>
+                    <td>{{poke.types}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

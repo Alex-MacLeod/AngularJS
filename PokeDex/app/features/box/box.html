@@ -1,0 +1,15 @@
+<div ng-controller="boxController as boxCtrl">
+	<table>
+		<thead>
+			<tr>
+				<th ng-click="boxCtrl.doSort()">Name</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="poke in boxCtrl.pokemon.results">
+				<td>{{poke.name | uppercase }}</td>
+			</tr>
+		</tbody>
+	</table>
+	<span>Total pokemon: {{boxCtrl.pokemon.count}}</span>
+</div>
